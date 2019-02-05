@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal, Material Design HTML Template</title>
+    <base href="/">
+    <!-- load fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Barlow:100,300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Portal Styles -->
+    <link id="portal-stylesheet" rel="stylesheet" href="assets/css/classic-light_blue-pink.css">
+    <!-- page specific CSS -->
+
+        <!-- dataTables -->
+        <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" charset="utf-8"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js" charset="utf-8"></script>
+        <link href="/plugins/datatable/css/dataTables.checkboxes.css" rel="stylesheet"/>
+
+        <!-- dataTables -->
+
+        <!-- branch -->
+        <script type="text/javascript">
+
+        // load Branch
+          (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        // init Branch
+        branch.init('key_live_bbNmRiaTYhv2ys78J34EPmgktEcH8sok');
+
+        </script>
+    
+<style>
+  .portal-card--demo {
+    max-width: 360px;
+    margin: 48px auto;
+  }
+  .portal-card--demo .mdc-card__media {
+      height: 200px;
+  }
+  .multiple-val-input{
+        height: auto;
+        min-height: 34px;
+        cursor: text;
+    }
+    .multiple-val-input ul{
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+    .multiple-val-input ul li{
+        list-style: none;
+        float: left;
+        padding: 3px 5px 3px 5px;
+        margin-bottom: 3px;
+        margin-right: 3px;
+        position: relative;
+        line-height: 13px;
+        cursor: default;
+        border: 1px solid #aaaaaa;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+        background-clip: padding-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: #e4e4e4;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eee));
+        background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+        background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+        background-image: linear-gradient(to top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+    }
+    .multiple-val-input ul li a{
+        display: inline;
+        color: #333;
+        text-decoration: none;
+    }
+    .multiple-val-input ul li a, .multiple-val-input ul li div{
+        display: inline;
+        margin-left: 3px;
+    }
+    .multiple-val-input input[type="text"]{
+        float: left;
+        border: none;
+        outline: none;
+        height: 20px;
+        min-width: 5px;
+        width: 5px;
+    }
+    .multiple-val-input span.input_hidden{
+        font-size: 14px;
+        position: absolute;
+        clip: rect(0,0,0,0);
+    }
+</style>
+
+  </head>
+
+  <body class="mdc-typography pace-on">
+
+    <div class="portal-loader-logo-wrapper">
+  <div class="portal-loader-logo">
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__bottom"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__top"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__left"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__right"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__inner"></div>
+  </div>
+  <div class="portal-loader-logo-text">
+    Portal
+  </div>
+</div>
+
+
+    <div class="portal-wrapper">
+
+      <div class="portal-wrapper__sidenav portal-wrapper__sidenav--classic mdc-theme--dark">
+        <aside id="left-drawer" class="mdc-drawer mdc-drawer--persistent mdc-drawer--open mdc-drawer--portal-flex-content">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <img src="/assets/images/portal-logo.png" alt="Portal" class="mdc-toolbar__logo">
+      <span class="mdc-toolbar__title">Portal</span>
+    </section>
+  </div>
+</header>
+<div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+  <nav class="mdc-list mdc-list--avatar-list portal-navigation-list">
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">home</i>
+        Dashboard
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="index.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">dashboard</i>
+            Analytics
+          </span>
+          
+            <span class="portal-badge portal-badge--secondary">4</span>
+          
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="dashboard-commerce.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">shopping_cart</i>
+            Ecommerce
+          </span>
+          
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="dashboard-crypto.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">euro_symbol</i>
+            Cryptocurrency
+          </span>
+          
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="dashboard-project.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+            Project
+          </span>
+          
+        </a>
+      
+    </nav>
+  </nav>
+  <nav class="mdc-list portal-navigation-list">
+    <a class="portal-navigation-list__item mdc-list-item " href="theming.html">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">palette</i>
+        Theming
+      </span>
+    </a>
+  </nav>
+  <h3 class="mdc-list-group__subheader portal-navigation__subheader ">APPS</h3>
+  <nav class="mdc-list mdc-list--avatar-list portal-navigation-list">
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">desktop_windows</i>
+        Apps
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="email.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">email</i>
+            Email
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="todo.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">check_circle</i>
+            Todo
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="maps.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">pin_drop</i>
+            Maps
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="chat.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">chat</i>
+            Chat
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="contacts.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">face</i>
+            Contacts
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="notes.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+            Notes
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="calendar.html">
+          <span class="portal-navigation-list__text">
+            <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">date_range</i>
+            Calendar
+          </span>
+        </a>
+      
+    </nav>
+  </nav>
+  <h3 class="mdc-list-group__subheader portal-navigation__subheader">USER INTERFACE</h3>
+  <nav class="mdc-list mdc-list--avatar-list portal-navigation-list">
+    
+      <a class="portal-navigation-list__item mdc-list-item " href="typography.html">
+        <span class="portal-navigation-list__text">
+          <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">text_format</i>
+          Typography
+        </span>
+      </a>
+    
+      <a class="portal-navigation-list__item mdc-list-item " href="colors.html">
+        <span class="portal-navigation-list__text">
+          <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">palette</i>
+          Colors
+        </span>
+      </a>
+    
+  </nav>
+  <h3 class="mdc-list-group__subheader portal-navigation__subheader">PAGES</h3>
+  <nav class="mdc-list mdc-list--avatar-list portal-navigation-list">
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">perm_identity</i>
+        Authentication
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="login.html">
+          <span class="portal-navigation-list__text">
+            Login
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="register.html">
+          <span class="portal-navigation-list__text">
+            Register
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="forgot-password.html">
+          <span class="portal-navigation-list__text">
+            Forgot Password
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="lock.html">
+          <span class="portal-navigation-list__text">
+            Lock
+          </span>
+        </a>
+      
+    </nav>
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">error</i>
+        Errors
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="404.html">
+          <span class="portal-navigation-list__text">
+            404
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="500.html">
+          <span class="portal-navigation-list__text">
+            500
+          </span>
+        </a>
+      
+    </nav>
+  </nav>
+  <h3 class="mdc-list-group__subheader portal-navigation__subheader">ELEMENTS</h3>
+  <nav class="mdc-list mdc-list--avatar-list portal-navigation-list">
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">extension</i>
+        Form Controls
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="checkbox.html">
+          <span class="portal-navigation-list__text">
+            Checkbox
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="input.html">
+          <span class="portal-navigation-list__text">
+            Input
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="radio.html">
+          <span class="portal-navigation-list__text">
+            Radio
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="select.html">
+          <span class="portal-navigation-list__text">
+            Select
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="slider.html">
+          <span class="portal-navigation-list__text">
+            Slider
+          </span>
+        </a>
+      
+    </nav>
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">view_module</i>
+        Layout
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item mdc-list-item--activated" href="cards.html">
+          <span class="portal-navigation-list__text">
+            Cards
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="tabs.html">
+          <span class="portal-navigation-list__text">
+            Tabs
+          </span>
+        </a>
+      
+    </nav>
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">error</i>
+        Buttons & Indicators
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="buttons.html">
+          <span class="portal-navigation-list__text">
+            Buttons
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="progress.html">
+          <span class="portal-navigation-list__text">
+            Linear Progress
+          </span>
+        </a>
+      
+    </nav>
+    <a class="mdc-list-item portal-navigation-list__item" href="#">
+      <span class="portal-navigation-list__text">
+        <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon">feedback</i>
+        Popups & Modals
+      </span>
+      <i class="material-icons portal-navigation-list__icon-collapse">keyboard_arrow_down</i>
+    </a>
+    <nav class="mdc-list portal-navigation-list">
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="dialog.html">
+          <span class="portal-navigation-list__text">
+            Dialog
+          </span>
+        </a>
+      
+        <a class="portal-navigation-list__item mdc-list-item " href="snackbar.html">
+          <span class="portal-navigation-list__text">
+            Snackbar
+          </span>
+        </a>
+      
+    </nav>
+  </nav>
+</div>
+<footer class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a id="portal-sidemenu-close-icon" href="#" class="material-icons mdc-toolbar__menu-icon">
+        <span class="portal-navigation-list__text portal-sidenav-collapse-icon">
+          chevron_left
+        </span>
+      </a>
+    </section>
+  </div>
+</footer>
+
+          </nav>
+        </aside>
+      </div>
+
+      <main class="portal-main">
+
+        <header class="mdc-toolbar mdc-toolbar--portal-no-shrink portal-toolbar">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <a id="portal-top-toolbar-burger-icon" href="#" class="portal-burger-menu-icon--classic material-icons mdc-toolbar__menu-icon">menu</a>
+      <span class="mdc-toolbar__title">Portal</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+
+      <div id="portal-layout-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Notifications">
+        apps
+
+        <div class="mdc-menu" tabindex="-1" id="portal-layout-menu">
+          <div class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            
+            
+              <a href="/toolbar" class="mdc-list-item" role="menuitem" tabindex="0">Toolbar</a>
+            
+            
+              <a href="/compact" class="mdc-list-item" role="menuitem" tabindex="0">Compact</a>
+            
+            
+              <a href="/boxed" class="mdc-list-item" role="menuitem" tabindex="0">Boxed</a>
+            
+            
+              <a href="/tabbed" class="mdc-list-item" role="menuitem" tabindex="0">Tabbed</a>
+            
+            
+              <a href="/funky" class="mdc-list-item" role="menuitem" tabindex="0">Funky</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="portal-theme-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Change Colors">
+        invert_colors
+
+        <div class="mdc-menu" tabindex="-1" id="portal-theme-menu">
+          <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <li id="classic-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Light Blue / Pink
+            </li>
+            <li id="classic-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Green / Deep Orange
+            </li>
+            <li id="classic-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Indigo / Orange
+            </li>
+            <li id="dark-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Light Blue / Pink
+            </li>
+            <li id="dark-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Green / Deep Orange
+            </li>
+            <li id="dark-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Indigo / Orange
+            </li>
+            <li id="night-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Light Blue / Pink
+            </li>
+            <li id="night-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Green / Deep Orange
+            </li>
+            <li id="night-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Indigo / Orange
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="rtl-switch"
+        class="mdc-toolbar__icon toggle material-icons"
+        role="button"
+        aria-label="Text Direction"
+        aria-pressed="false"
+        tabindex="0"
+        data-toggle-on='{"content": "format_textdirection_l_to_r", "label": "Left to Right"}'
+        data-toggle-off='{"content": "format_textdirection_r_to_l", "label": "Right to Left"}'>
+        format_textdirection_l_to_r
+      </div>
+      <div id="portal-top-toolbar-notification-icon" class="mdc-toolbar__icon portal-toolbar__notification-icon" aria-label="Notifications">
+        <span class="material-icons">notifications</span>
+        <span class="portal-badge portal-badge--secondary portal-toolbar__badge">3</span>
+      </div>
+    </section>
+  </div>
+</header>
+
+
+        <div class="portal-main__content mdc-theme--background mdc-theme--text-primary-on-background">
+          
+  <div class="portal-pages__header">
+      <img class="portal-pages__header-icon" src="/assets/images/tanishq.png" alt="Tanishq" x="0" y="0" width="auto" height="150" viewBox="0 0 64 64">
+  </div>
+  <section class="portal-pages__content">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-1-desktop"></div>
+
+
+
+        <div class="mdc-layout-grid__cell--span-10-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone portal-pages__content-inner">
+
+          <!-- dinchak -->
+          <div class="mdc-tab-bar hero-demo-tab-bar" role="tablist" aria-label="Navigation">
+           <div class="mdc-tab-scroller">
+             <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+               <div class="mdc-tab-scroller__scroll-content">
+
+
+
+                 <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1">
+                   <span class="mdc-tab__content">
+                     <span class="mdc-tab__text-label"><b>Select Jewellery</b></span>
+                   </span>
+                   <span class="mdc-tab-indicator">
+                     <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                   </span>
+                   <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+                 </button>
+                 <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1">
+                   <span class="mdc-tab__content">
+                     <span class="mdc-tab__text-label">Select Expiry Date</span>
+                   </span>
+                   <span class="mdc-tab-indicator">
+                     <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                   </span>
+                   <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+                 </button>
+                 <button class="mdc-tab" role="tab" aria-selected="false" tabindex="-1">
+                   <span class="mdc-tab__content">
+                     <span class="mdc-tab__text-label">Enter Phone Number</span>
+                   </span>
+                   <span class="mdc-tab-indicator">
+                     <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                   </span>
+                   <span class="mdc-tab__ripple mdc-ripple-upgraded"></span>
+                 </button>
+               </div>
+             </div>
+           </div>
+         </div>
+          <!-- dinchak -->
+          <h3 class="portal-pages__heading">Select Jewellery</h3>
+
+          <form id="myform" method="post">
+
+          <table id="mytable" class="mdl-data-table celled table" style="text-align: center !important;">
+              <thead>
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Height</th>
+                    <th>Image</th>
+                  </tr>
+              </thead>
+
+              <tbody><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">AB02935</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/AB02935.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC0109</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/DSC0109.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC1909</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC1909.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC1944</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/DSC1944.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC3571</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC3571.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC3573</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC3573.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC3582</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/DSC3582.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC3587</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC3587.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC4218</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC4218.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC6291</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC6291.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC6303</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/DSC6303.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC6304</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC6304.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC6306</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/DSC6306.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">DSC6307</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/DSC6307.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2719</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/JZ9A2719.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2739</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/JZ9A2739.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2772</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/JZ9A2772.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2773</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/JZ9A2773.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2774</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/JZ9A2774.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2776</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/JZ9A2776.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2781</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/JZ9A2781.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2787</td><td>Earrings</td><td>50</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Earrings/JZ9A2787.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">JZ9A2800</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/JZ9A2800.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">N1</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/N1.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">N2</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/N2.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">R1A9522</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/R1A9522.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="odd"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">R1A9531</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/R1A9531.png" height="100px" width="auto" align="center"></td></tr><tr role="row" class="even"><td class=" dt-body-center"><input type="checkbox" class="dt-checkboxes"></td><td class="sorting_1">R1A95392</td><td>Necklace</td><td>100</td><td><img src="https://s3.ap-south-1.amazonaws.com/mirrar/sawansukha/inventory/Necklaces/R1A95392.png" height="100px" width="auto" align="center"></td></tr></tbody>
+
+              <tfoot>
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Height</th>
+                    <th>Image</th>
+                  </tr>
+              </tfoot>
+          </table>
+
+          <p><b>Selected Jewellery</b></p>
+          <pre id="view-rows"></pre>
+          <p><button class="mdc-button" style="float: right;"><span class="mdc-button__label"><b>Next</b></span></button><br/></p>
+      </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+        </div>
+
+        <footer class="portal-footer mdc-toolbar mdc-toolbar--portal-no-shrink ">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <div class="mdc-toolbar__title">
+          <small>
+            © 2018 Oxygenna
+          </small>
+      </div>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-twitter"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-facebook"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-linkedin"></i>
+        </small>
+      </a>
+    </section>
+  </div>
+</footer>
+
+      </main>
+
+      <aside id="notifications-drawer" class="mdc-drawer mdc-drawer--temporary mdc-drawer--portal-flex-content mdc-drawer--portal-right">
+  <nav class="mdc-drawer__drawer">
+    <nav id="notification-tab-bar" class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="false" tabindex="-1">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Today</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Notifications</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="notification-panels" class="mdc-drawer__content portal-hide-scrollbars portal-notification-panels">
+      <div class="portal-notifications-tab-panel portal-tab-panel portal-tab-panel--active" role="tabpanel" aria-hidden="false">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline4">
+          Thursday, January 19, 2018
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Weather</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-weather">
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/30.gif" alt="London">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">London</span>
+                <span class="mdc-list-item__secondary-text">Cloudy</span>
+              </div>
+              <span class="mdc-list-item__meta">45°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="New York">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">New York</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">18°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="Sydney">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">Sydney</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">69°</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Schedule</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-schedule">
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Go for a walk with Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Mushroom Kingdom
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">9:30</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Meeting with Bowser</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Peach's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:22</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Rescue Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Bowser's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:15</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="portal-notifications-tab-panel portal-tab-panel" role="tabpanel" aria-hidden="true">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline">
+          Today
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-comments portal-social-circle-icon portal-social-circle-icon--message"></i>
+              Message
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>5 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Progress Report</h4>
+            Hi, please find attached report...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-facebook portal-social-circle-icon portal-social-circle-icon--facebook"></i>
+              Facebook
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>10 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            You received a new message
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-slack portal-social-circle-icon portal-social-circle-icon--slack"></i>
+              Slack
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>15 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">#Support</h4>
+            Hi there, got some news...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-twitter portal-social-circle-icon portal-social-circle-icon--twitter"></i>
+              Twitter
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>1 hour ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Web design trends</h4>
+            #web #design
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-spotify portal-social-circle-icon portal-social-circle-icon--spotify"></i>
+              Spotify
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>2 hours ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">No Quarter</h4>
+            Led Zeppelin
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="mdc-toolbar mdc-theme--text-primary-on-light mdc-theme--primary-light-bg mdc-toolbar--portal-no-shrink">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" class="material-icons mdc-toolbar__menu-icon portal-drawer-notification-collapse-icon">chevron_right</a>
+        </section>
+      </div>
+    </footer>
+  </nav>
+</aside>
+
+
+    </div>
+
+    <!-- initialise material components js -->
+    <script src="assets/js/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
+    <!-- initialise marquee js -->
+    <script src="assets/js/marquee3k.js"></script>
+    <script>Marquee3k.init()</script>
+    <!-- layout js -->
+    <script src="assets/js/layout/classic.js"></script>
+    <!-- components js -->
+    <script src="assets/js/partials/notification-sidenav.js"></script>
+    <script src="assets/js/partials/top-toolbar.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="assets/js/pace.js"></script>
+    <!-- page specific JS -->
+    
+
+<!--datetimepicker-->
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
+<!--datetimepicker-->
+
+<!-- dataTable -->
+    <script src="/assets/datatable/js/jquery.min.js"></script>
+    <script src="/assets/datatable/js/bootstrap.min.js"></script>
+    <script src="/assets/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/datatable/js/dataTables.bootstrap.min.js"></script>
+    <script src="/assets/datatable/js/dataTables.checkboxes.min.js"></script>
+
+
+    <script>
+    $(document).ready(function(){
+
+
+      console.log("foo aanand");
+      //console.log(linkData);
+
+        var datetable = $("#mytable").DataTable({
+
+            ajax: '/plugins/datatable/sampledata.json',
+            columnDefs: [
+                {
+                    targets: 0,
+                    checkboxes: {
+                        seletRow: true
+                    },
+
+                },
+                { targets: 4,
+       render: function(data) {
+       return '<img src="'+data+'" height="100px" width="auto" align="center">'
+                            }
+                }
+
+            ],
+            select:{
+
+                  style: 'multi'
+            },
+
+            order: [[1, 'asc']]
+
+        })
+
+      $("#myform").on('submit', function(e){
+            var form = this
+            var rowsel = datetable.column(0).checkboxes.selected();
+            $.each(rowsel, function(index, rowId){
+                $(form).append(
+                    $('<input>').attr('type','hidden').attr('select','id[]').val(rowId)
+                )
+            })
+            $("#view-rows").text(rowsel.join(","))
+            $("#view-form").text($(form).serialize())
+            $('input[name="id\[\]"]', form).remove()
+
+  var linkData = {
+  campaign: 'content 123',
+  channel: 'facebook',
+  feature: 'dashboard',
+  stage: 'new user',
+  tags: [ 'tag1', 'tag2', 'tag3' ],
+  alias: '',
+  data: {
+    'custom_bool': true,
+    'custom_int': Date.now(),
+    'custom_string': Array.from(rowsel),
+    '$og_title': 'Title',
+    '$og_description': 'Description',
+    '$og_image_url':'http://lorempixel.com/400/400'
+  }
+  };
+
+  branch.link(linkData, function(err, link) {
+  console.log(link);
+  document.getElementById('branch-button').onclick = function() {
+    alert(link || err);
+   };
+  });  e.preventDefault()
+        })
+    });
+    </script>
+
+
+   <!-- dataTable -->
+
+   <!--jQuery Method-->
+  <script>
+  $(document).ready(function(){
+  $(".btn1").click(function(){
+    alert("http://styedotme.com/" + $("#view-rows").text() + $("#daterows").val() + $("#view-daterows").text());
+   });
+   });
+  </script>
+
+  <!-- chip -->
+  <script type="text/javascript">
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.chips');
+      var instances = M.Chips.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $('.chips').chips();
+    $('.chips-initial').chips({
+      data: [{
+        tag: 'Apple',
+      }, {
+        tag: 'Microsoft',
+      }, {
+        tag: 'Google',
+      }],
+    });
+    $('.chips-placeholder').chips({
+      placeholder: 'Enter a tag',
+      secondaryPlaceholder: '+Tag',
+    });
+    $('.chips-autocomplete').chips({
+      autocompleteOptions: {
+        data: {
+          'Apple': null,
+          'Microsoft': null,
+          'Google': null
+        },
+        limit: Infinity,
+        minLength: 1
+      }
+    });
+
+  </script>
+
+   <!--jQuery Method-->
+  <!-- show date picker -->
+   <script type="text/javascript">
+   $(document).ready(function () {
+    $("#show-date-picker").click(function () {
+        $("#date-picker").toggle();
+                  });
+                  });
+   </script>
+   <!-- show date picker -->
+
+      <script type="text/javascript"
+       src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+      </script>
+      <script type="text/javascript"
+       src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js">
+      </script>
+      <script type="text/javascript"
+       src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+      </script>
+      <script type="text/javascript"
+       src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
+      </script>
+      <script type="text/javascript">
+     $(function() {
+       $('#datetimepicker1').datetimepicker({
+         language: 'pt-BR'
+       });
+     });
+   </script>
+
+
+
+  </body>
+</html>

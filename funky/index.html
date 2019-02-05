@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal, Material Design HTML Template</title>
+    <base href="/funky/">
+    <!-- load Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Barlow:100,300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Portal Styles -->
+    <link id="portal-stylesheet" rel="stylesheet" href="/assets/css/classic-light_blue-pink.css">
+    <!-- page specific CSS -->
+
+        <!-- dataTables -->
+        <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" charset="utf-8"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js" charset="utf-8"></script>
+        <link href="/plugins/datatable/css/dataTables.checkboxes.css" rel="stylesheet"/>
+
+        <!-- dataTables -->
+
+        <!-- branch -->
+        <script type="text/javascript">
+
+        // load Branch
+          (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        // init Branch
+        branch.init('key_live_bbNmRiaTYhv2ys78J34EPmgktEcH8sok');
+
+        </script>
+    
+  </head>
+
+  <body class="mdc-typography pace-on">
+
+    <div class="portal-loader-logo-wrapper">
+  <div class="portal-loader-logo">
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__bottom"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__top"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__left"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__right"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__inner"></div>
+  </div>
+  <div class="portal-loader-logo-text">
+    Portal
+  </div>
+</div>
+
+
+    <div class="portal-wrapper">
+
+      <div class="portal-wrapper__sidenav portal-wrapper__sidenav--compact mdc-theme--dark">
+        <aside id="left-drawer" class="mdc-drawer mdc-drawer--persistent mdc-drawer--open mdc-drawer--portal-flex-content">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-center">
+      <img src="/assets/images/portal-logo.png" alt="Portal" class="mdc-toolbar__logo">
+    </section>
+  </div>
+</header>
+<div class="mdc-list-group mdc-drawer__content portal-drawer-group portal-hide-scrollbars portal-navigation">
+  <nav class="mdc-list portal-navigation-list">
+    <div class="mdc-menu-anchor">
+      <a id="dashboard-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">dashboard</i>
+        Dashboard
+      </a>
+      <a id="apps-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">desktop_windows</i>
+        Apps
+      </a>
+      <a id="elements-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">widgets</i>
+        Elements
+      </a>
+    </div>
+  </nav>
+</div>
+
+<footer class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a id="portal-sidemenu-close-icon" href="#" class="material-icons mdc-toolbar__menu-icon">
+        <span class="portal-navigation-list__text portal-sidenav-collapse-icon">
+          chevron_left
+        </span>
+      </a>
+    </section>
+  </div>
+</footer>
+
+
+          </nav>
+        </aside>
+        <aside id="dashboard-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Dashboard</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                  <a class="portal-navigation-list__item mdc-list-item mdc-list-item--activated" href="index.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">dashboard</i>
+                      Analytics
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-commerce.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">shopping_cart</i>
+                      Ecommerce
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-crypto.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">euro_symbol</i>
+                      Cryptocurrency
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-project.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+                      Project
+                    </span>
+                  </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+        <aside id="app-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Apps</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="email.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">email</i>
+                      Email
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="todo.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">check_circle</i>
+                      Todo
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="maps.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">pin_drop</i>
+                      Maps
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="chat.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">chat</i>
+                      Chat
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="contacts.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">face</i>
+                      Contacts
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="notes.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+                      Notes
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="calendar.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">date_range</i>
+                      Calendar
+                    </span>
+                  </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+        <aside id="elements-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Elements</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="buttons.html">
+                  <span class="portal-navigation-list__text">
+                    Buttons
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="cards.html">
+                  <span class="portal-navigation-list__text">
+                    Cards
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="checkbox.html">
+                  <span class="portal-navigation-list__text">
+                    Checkbox
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="input.html">
+                  <span class="portal-navigation-list__text">
+                    Input
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="progress.html">
+                  <span class="portal-navigation-list__text">
+                    Linear Progress
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="dialog.html">
+                  <span class="portal-navigation-list__text">
+                    Dialog
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="radio.html">
+                  <span class="portal-navigation-list__text">
+                    Radio
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="select.html">
+                  <span class="portal-navigation-list__text">
+                    Select
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="slider.html">
+                  <span class="portal-navigation-list__text">
+                    Slider
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="snackbar.html">
+                  <span class="portal-navigation-list__text">
+                    Snackbar
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="tabs.html">
+                  <span class="portal-navigation-list__text">
+                    Tabs
+                  </span>
+                </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+      </div>
+
+      <main class="portal-main">
+
+        <header class="mdc-toolbar mdc-toolbar--portal-no-shrink portal-toolbar">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <a id="portal-top-toolbar-burger-icon" href="#" class="portal-burger-menu-icon--funky material-icons mdc-toolbar__menu-icon">menu</a>
+      <span class="mdc-toolbar__title">Portal</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+
+      <div id="portal-layout-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Notifications">
+        apps
+
+        <div class="mdc-menu" tabindex="-1" id="portal-layout-menu">
+          <div class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            
+              <a href="/" class="mdc-list-item" role="menuitem" tabindex="0">Classic</a>
+            
+            
+              <a href="/toolbar" class="mdc-list-item" role="menuitem" tabindex="0">Toolbar</a>
+            
+            
+              <a href="/compact" class="mdc-list-item" role="menuitem" tabindex="0">Compact</a>
+            
+            
+              <a href="/boxed" class="mdc-list-item" role="menuitem" tabindex="0">Boxed</a>
+            
+            
+              <a href="/tabbed" class="mdc-list-item" role="menuitem" tabindex="0">Tabbed</a>
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="portal-theme-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Change Colors">
+        invert_colors
+
+        <div class="mdc-menu" tabindex="-1" id="portal-theme-menu">
+          <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <li id="classic-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Light Blue / Pink
+            </li>
+            <li id="classic-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Green / Deep Orange
+            </li>
+            <li id="classic-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Indigo / Orange
+            </li>
+            <li id="dark-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Light Blue / Pink
+            </li>
+            <li id="dark-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Green / Deep Orange
+            </li>
+            <li id="dark-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Indigo / Orange
+            </li>
+            <li id="night-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Light Blue / Pink
+            </li>
+            <li id="night-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Green / Deep Orange
+            </li>
+            <li id="night-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Indigo / Orange
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="rtl-switch"
+        class="mdc-toolbar__icon toggle material-icons"
+        role="button"
+        aria-label="Text Direction"
+        aria-pressed="false"
+        tabindex="0"
+        data-toggle-on='{"content": "format_textdirection_l_to_r", "label": "Left to Right"}'
+        data-toggle-off='{"content": "format_textdirection_r_to_l", "label": "Right to Left"}'>
+        format_textdirection_l_to_r
+      </div>
+      <div id="portal-top-toolbar-notification-icon" class="mdc-toolbar__icon portal-toolbar__notification-icon" aria-label="Notifications">
+        <span class="material-icons">notifications</span>
+        <span class="portal-badge portal-badge--secondary portal-toolbar__badge">3</span>
+      </div>
+    </section>
+  </div>
+</header>
+
+
+        <div class="portal-main__content mdc-theme--background mdc-theme--text-primary-on-background">
+          
+  <div class="mdc-layout-grid portal-dashboard">
+    <div class="mdc-layout-grid__inner">
+      <div class="portal-widget mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <p class="portal-widget__heading mdc-typography--subtitle1">Portal Analytics</p>
+        <div class="mdc-card mdc-card--portal-fullheight mdc-card--portal-space-between portal-widget__card">
+          <nav id="portal-stats-chart-nav" class="mdc-tab-bar mdc-tab-bar--portal-border-bottom mdc-tab-bar--portal-display-block">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <a class="mdc-tab mdc-tab--portal-link mdc-tab--active">
+                    <div class="mdc-tab__portal-stat-tab mdc-tab__content">
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption">Users</span>
+                      <span class="mdc-typography--headline5">2.9K</span>
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption mdc-tab__portal-stat-caption--trend-up">
+                        <i class="material-icons mdc-tab__portal-stat-icon">trending_up</i> 23%
+                      </span>
+                    </div>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  <a class="mdc-tab mdc-tab--portal-link">
+                    <div class="mdc-tab__portal-stat-tab mdc-tab__content">
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption">Revenue</span>
+                      <span class="mdc-typography--headline5">$2906</span>
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption mdc-tab__portal-stat-caption--trend-down">
+                        <i class="material-icons mdc-tab__portal-stat-icon">trending_down</i> -56%
+                      </span>
+                    </div>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  <a class="mdc-tab mdc-tab--portal-link">
+                    <div class="mdc-tab__portal-stat-tab mdc-tab__content">
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption">Conversion Rate</span>
+                      <span class="mdc-typography--headline5">0.24%</span>
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption mdc-tab__portal-stat-caption--trend-up">
+                        <i class="material-icons mdc-tab__portal-stat-icon">trending_up</i> 29%
+                      </span>
+                    </div>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  <a class="mdc-tab mdc-tab--portal-link">
+                    <div class="mdc-tab__portal-stat-tab mdc-tab__content">
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption">Sessions</span>
+                      <span class="mdc-typography--headline5">5.2K</span>
+                      <span class="mdc-typography--caption mdc-tab__portal-stat-caption mdc-tab__portal-stat-caption--trend-down">
+                        <i class="material-icons mdc-tab__portal-stat-icon">trending_up</i> 79%
+                      </span>
+                    </div>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="portal-tab-panel portal-tab-panel--active portal-analytics-panel" role="tabpanel">
+            <canvas id="analyticsChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="portal-widget portal-widget-primary mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <p class="portal-widget__heading mdc-typography--subtitle1">Active User</p>
+        <div class="mdc-card portal-widget__card mdc-card--portal-fullheight mdc-card--portal-space-between">
+          <section class="portal-widget__card-content">
+            <p class="mdc-typography--body2">Active users right now </p>
+            <p class="mdc-typography--headline2 mdc-card__portal-counter">59</p>
+            <p class="mdc-typography--caption">Page views per minute</p>
+            <div class="mdc-card__portal-divider"></div>
+          </section>
+          <canvas id="usersChart" style="max-height: 200px;"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__inner">
+      <div class="portal-widget mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <p class="portal-widget__heading mdc-typography--subtitle1">Sessions By Device</p>
+        <div class="mdc-card portal-widget__card mdc-card--portal-fullheight mdc-card--portal-space-between">
+          <div class="portal-tab-sessions-chart">
+            <canvas id="sessionsChart"></canvas>
+          </div>
+          <div class="mdc-card__portal-divider"></div>
+          <section class="portal-sessions-flex portal-widget__card-content portal-widget__card-icons-dots">
+            <div class="portal-text-align-center portal-sessions-flex__item">
+              <div class="portal-widget__card-icons-dots__icon">
+                <i class="fa fa-laptop"></i>
+                <span></span>
+              </div>
+              <div class="mdc-typography--caption">Desktop</div>
+              <div class="mdc-typography--headline4 portal-font-weight-light">25</div>
+            </div>
+            <div class="portal-text-align-center portal-sessions-flex__item">
+              <div class="portal-widget__card-icons-dots__icon">
+                <i class="fa fa-tablet"></i>
+                <span></span>
+              </div>
+              <div class="mdc-typography--caption">Tablet</div>
+              <div class="mdc-typography--headline4 portal-font-weight-light">5</div>
+            </div>
+            <div class="portal-text-align-center portal-sessions-flex__item">
+              <div class="portal-widget__card-icons-dots__icon">
+                <i class="fa fa-mobile"></i>
+                <span></span>
+              </div>
+              <div class="mdc-typography--caption">Mobile</div>
+              <div class="mdc-typography--headline4 portal-font-weight-light">11</div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="portal-widget mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+        <p class="portal-widget__heading mdc-typography--subtitle1">Client Acquisition</p>
+        <div class="mdc-card portal-widget__card mdc-card--portal-fullheight mdc-card--portal-space-between">
+          <nav id="portal-table-nav" class="mdc-tab-bar mdc-tab-bar--portal-border-bottom  mdc-tab-bar--portal-display-block">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <a class="mdc-tab mdc-tab--portal-link mdc-tab--active" tabindex="-1">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Brand Paid Search</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  <a class="mdc-tab mdc-tab--portal-link" tabindex="0">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Generic Search</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div id="clients-table-tabs" class="portal-clients-table">
+            <table class="mdl-data-table portal-table-tab-panel portal-table-tab-panel--active">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Page</th>
+                  <th>Page Views</th>
+                  <th>Duration</th>
+                  <th>Conversion Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/1</td>
+                  <td>11</td>
+                  <td>00:00:53</td>
+                  <td>25%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/2</td>
+                  <td>13</td>
+                  <td>00:01:05</td>
+                  <td>32%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/3</td>
+                  <td>135</td>
+                  <td>00:01:17</td>
+                  <td>21%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/4</td>
+                  <td>153</td>
+                  <td>00:01:11</td>
+                  <td>25%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/5</td>
+                  <td>54</td>
+                  <td>00:02:03</td>
+                  <td>20%</td>
+                </tr>
+                <tr class="portal-table-footer">
+                  <td></td>
+                  <td>
+                    Items per page: 5
+                  </td>
+                  <td>
+                    1 - 5 of 15
+                  </td>
+                  <td>
+                    <a href="#" class="material-icons portal-table-footer--icon-left">
+                      chevron_left
+                    </a>
+                    <a href="#" class="material-icons portal-table-footer--icon-right">
+                      chevron_right
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="mdl-data-table portal-table-tab-panel">
+              <thead>
+                <tr>
+                  <th class="mdl-data-table__cell--non-numeric">Page</th>
+                  <th>Page Views</th>
+                  <th>Duration</th>
+                  <th>Conversion Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/1</td>
+                  <td>198</td>
+                  <td>00:03:53</td>
+                  <td>15%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/2</td>
+                  <td>472</td>
+                  <td>00:02:45</td>
+                  <td>82%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/3</td>
+                  <td>12</td>
+                  <td>00:01:07</td>
+                  <td>66%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/4</td>
+                  <td>11</td>
+                  <td>00:05:31</td>
+                  <td>33%</td>
+                </tr>
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric">/products/5</td>
+                  <td>487</td>
+                  <td>00:02:53</td>
+                  <td>26%</td>
+                </tr>
+                <tr class="portal-table-footer">
+                  <td></td>
+                  <td>
+                    Items per page: 5
+                  </td>
+                  <td>
+                    1 - 5 of 15
+                  </td>
+                  <td>
+                    <a href="#" class="material-icons portal-table-footer--icon-left">
+                      chevron_left
+                    </a>
+                    <a href="#" class="material-icons portal-table-footer--icon-right">
+                      chevron_right
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+
+        <footer class="portal-footer mdc-toolbar mdc-toolbar--portal-no-shrink ">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <div class="mdc-toolbar__title">
+          <small>
+            © 2018 Oxygenna
+          </small>
+      </div>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-twitter"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-facebook"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-linkedin"></i>
+        </small>
+      </a>
+    </section>
+  </div>
+</footer>
+
+
+      </main>
+
+      <aside id="notifications-drawer" class="mdc-drawer mdc-drawer--temporary mdc-drawer--portal-flex-content mdc-drawer--portal-right">
+  <nav class="mdc-drawer__drawer">
+    <nav id="notification-tab-bar" class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="false" tabindex="-1">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Today</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Notifications</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="notification-panels" class="mdc-drawer__content portal-hide-scrollbars portal-notification-panels">
+      <div class="portal-notifications-tab-panel portal-tab-panel portal-tab-panel--active" role="tabpanel" aria-hidden="false">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline4">
+          Thursday, January 19, 2018
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Weather</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-weather">
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/30.gif" alt="London">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">London</span>
+                <span class="mdc-list-item__secondary-text">Cloudy</span>
+              </div>
+              <span class="mdc-list-item__meta">45°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="New York">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">New York</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">18°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="Sydney">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">Sydney</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">69°</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Schedule</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-schedule">
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Go for a walk with Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Mushroom Kingdom
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">9:30</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Meeting with Bowser</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Peach's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:22</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Rescue Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Bowser's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:15</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="portal-notifications-tab-panel portal-tab-panel" role="tabpanel" aria-hidden="true">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline">
+          Today
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-comments portal-social-circle-icon portal-social-circle-icon--message"></i>
+              Message
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>5 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Progress Report</h4>
+            Hi, please find attached report...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-facebook portal-social-circle-icon portal-social-circle-icon--facebook"></i>
+              Facebook
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>10 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            You received a new message
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-slack portal-social-circle-icon portal-social-circle-icon--slack"></i>
+              Slack
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>15 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">#Support</h4>
+            Hi there, got some news...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-twitter portal-social-circle-icon portal-social-circle-icon--twitter"></i>
+              Twitter
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>1 hour ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Web design trends</h4>
+            #web #design
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-spotify portal-social-circle-icon portal-social-circle-icon--spotify"></i>
+              Spotify
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>2 hours ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">No Quarter</h4>
+            Led Zeppelin
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="mdc-toolbar mdc-theme--text-primary-on-light mdc-theme--primary-light-bg mdc-toolbar--portal-no-shrink">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" class="material-icons mdc-toolbar__menu-icon portal-drawer-notification-collapse-icon">chevron_right</a>
+        </section>
+      </div>
+    </footer>
+  </nav>
+</aside>
+
+
+    </div>
+
+    <!-- initialise material components js -->
+    <script src="/assets/js/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
+    <!-- initialise marquee js -->
+    <script src="/assets/js/marquee3k.js"></script>
+    <script>Marquee3k.init()</script>
+    <!-- layout js -->
+    <script src="/assets/js/layout/funky.js"></script>
+    <script src="/assets/js/partials/notification-sidenav.js"></script>
+    <script src="/assets/js/partials/top-toolbar.js"></script>
+    <script src="/assets/js/Chart.js"></script>
+    <script src="/assets/js/pace.js"></script>
+    <!-- page specific JS -->
+    
+  <script>
+    (function() {
+
+      function setupDashboardCharts() {
+        const analyticsCtx = document.getElementById('analyticsChart').getContext('2d');
+        const usersCtx = document.getElementById('usersChart').getContext('2d');
+        const sessionsCtx = document.getElementById('sessionsChart').getContext('2d');
+        let primaryColor = window.getComputedStyle(document.documentElement).getPropertyValue('--mdc-theme-primary');
+        let secondaryColor = window.getComputedStyle(document.documentElement).getPropertyValue('--mdc-theme-secondary');
+        let secondaryDarkColor = ColorLuminance(secondaryColor, -0.2);
+        let secondaryLightColor = ColorLuminance(secondaryColor, 0.2);
+
+        // Fallback for IE11, whereby getPropertyValue returns an empty string.
+        primaryColor = '' === primaryColor ? '#03A9F4' : primaryColor;
+        secondaryColor = '' === secondaryColor ? '#FF4081' : secondaryColor;
+
+        // Users bar chart.
+        const usersChart = new Chart(usersCtx, {
+          type: 'bar',
+          data: {
+            labels: ['15 minutes ago', '30 minutes ago', '45 minutes ago', '60 minutes ago', '75 minutes ago', '90 minutes ago', '1 hour ago', '2 hours ago', '3 hours ago', '4 hours ago', '5 hours ago', '6 hours ago', '7 hours ago', '8 hours ago', '9 hours ago', '12 hours ago'],
+            datasets: [{
+              label: 'Views:',
+              data: [12, 19, 34, 57, 22, 39, 46, 37, 56, 48, 28, 43, 55, 27, 12, 26],
+              backgroundColor: 'rgba(255, 255, 255, 0.5)',
+              borderColor: 'rgba(255, 255, 255, 0.5)'
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            animation: false,
+            scaleShowVerticalLines: false,
+            responsive: true,
+            tooltips: {
+              enabled: true,
+              backgroundColor: '#ffffff',
+              titleFontColor: '#00ABEE',
+              bodyFontColor: 'rgba(0, 171, 238, 0.6)',
+              xPadding: 20,
+              yPadding: 20,
+              displayColors: false
+            },
+            scales: {
+              xAxes: [{
+                display: false
+              }],
+              yAxes: [{
+                display: false
+              }]
+            }
+          }
+        });
+        // Sessions doughnut chart
+        const sessionsChart = new Chart(sessionsCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Desktop', 'Tablet', 'Mobile'],
+            datasets: [{
+              data: [124, 88, 172],
+              borderWidth: 0,
+              backgroundColor: [secondaryColor, secondaryLightColor, secondaryDarkColor],
+              hoverBackgroundColor: secondaryColor
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            tooltips: {
+              enabled: true,
+              backgroundColor: '#00ABEE',
+              titleFontColor: '#ffffff',
+              bodyFontColor: '#ffffff',
+              xPadding: 20,
+              yPadding: 20,
+              displayColors: false
+            }
+          }
+        });
+
+        const analyticsChart = new Chart(analyticsCtx, {
+          type: 'line',
+          data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+              label: false,
+              data: [3479, 1250, 1600, 4900, 5250, 2750, 5500],
+              backgroundColor: 'rgba(255, 255, 255, 0)',
+              borderColor: primaryColor,
+              borderWidth: 2,
+              pointBackgroundColor: secondaryColor,
+              pointBorderColor: secondaryColor,
+              lineTension: 0.45
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            tooltips: {
+              enabled: true,
+              backgroundColor: '#00ABEE',
+              titleFontColor: '#ffffff',
+              bodyFontColor: 'rgba(255,255,255,0.6)',
+              xPadding: 20,
+              yPadding: 20,
+              displayColors: false
+            },
+            responsive: true,
+            maintainAspectRatio: false
+          }
+        });
+        // Analytics tabs listener. Datasets refresh on TabBarChange.
+        const analyticsTabBar = new mdc.tabBar.MDCTabBar(document.querySelector('#portal-stats-chart-nav'));
+        analyticsTabBar.listen('MDCTabBar:activated', function (t) {
+          for (let i = 0; i < analyticsChart.data.datasets[0].data.length; i++) {
+            analyticsChart.data.datasets[0].data[i] = Math.floor(Math.random() * 6000) + 200;
+          }
+          analyticsChart.update();
+        });
+
+        const clientsTabBar = new mdc.tabBar.MDCTabBar(document.querySelector('#portal-table-nav'));
+        // Client acquisition tabs listener.
+        clientsTabBar.listen('MDCTabBar:activated', function (t) {
+          const detailTabBar = t.detail;
+          const index = detailTabBar.index;
+          const panels = document.querySelector('#clients-table-tabs');
+          portalUpdateTabPanels(panels, index);
+        });
+      }
+
+      function portalUpdateTabPanels(panels, index) {
+        const activePanel = panels.querySelector('.portal-table-tab-panel.portal-table-tab-panel--active');
+        if (activePanel) {
+          activePanel.classList.remove('portal-table-tab-panel--active');
+        }
+        const newActivePanel = panels.querySelector('.portal-table-tab-panel:nth-child(' + (index + 1) + ')');
+        if (newActivePanel) {
+          newActivePanel.classList.add('portal-table-tab-panel--active');
+        }
+      }
+
+      function ColorLuminance(hex, lum) {
+        // validate hex string
+        hex = String(hex).replace(/[^0-9a-f]/gi, '');
+        if (hex.length < 6) {
+          hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+        }
+        lum = lum || 0;
+        // convert to decimal and change luminosity
+        var rgb = "#", c, i;
+        for (i = 0; i < 3; i++) {
+          c = parseInt(hex.substr(i*2,2), 16);
+          c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+          rgb += ("00"+c).substr(c.length);
+        }
+        return rgb;
+      }
+
+      // Wait 1sec before initializing the charts so the switcher CSS works.
+      setTimeout(setupDashboardCharts, 1000);
+
+      const body = document.getElementsByTagName('body').item(0);
+      body.addEventListener('portalThemeChanged', setupDashboardCharts);
+    })();
+  </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal, Material Design HTML Template</title>
+    <base href="/funky/">
+    <!-- load Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Barlow:100,300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Portal Styles -->
+    <link id="portal-stylesheet" rel="stylesheet" href="/assets/css/classic-light_blue-pink.css">
+    <!-- page specific CSS -->
+
+        <!-- dataTables -->
+        <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" charset="utf-8"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js" charset="utf-8"></script>
+        <link href="/plugins/datatable/css/dataTables.checkboxes.css" rel="stylesheet"/>
+
+        <!-- dataTables -->
+
+        <!-- branch -->
+        <script type="text/javascript">
+
+        // load Branch
+          (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        // init Branch
+        branch.init('key_live_bbNmRiaTYhv2ys78J34EPmgktEcH8sok');
+
+        </script>
+    
+  </head>
+
+  <body class="mdc-typography pace-on">
+
+    <div class="portal-loader-logo-wrapper">
+  <div class="portal-loader-logo">
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__bottom"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__top"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__left"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__right"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__inner"></div>
+  </div>
+  <div class="portal-loader-logo-text">
+    Portal
+  </div>
+</div>
+
+
+    <div class="portal-wrapper">
+
+      <div class="portal-wrapper__sidenav portal-wrapper__sidenav--compact mdc-theme--dark">
+        <aside id="left-drawer" class="mdc-drawer mdc-drawer--persistent mdc-drawer--open mdc-drawer--portal-flex-content">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-center">
+      <img src="/assets/images/portal-logo.png" alt="Portal" class="mdc-toolbar__logo">
+    </section>
+  </div>
+</header>
+<div class="mdc-list-group mdc-drawer__content portal-drawer-group portal-hide-scrollbars portal-navigation">
+  <nav class="mdc-list portal-navigation-list">
+    <div class="mdc-menu-anchor">
+      <a id="dashboard-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">dashboard</i>
+        Dashboard
+      </a>
+      <a id="apps-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">desktop_windows</i>
+        Apps
+      </a>
+      <a id="elements-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">widgets</i>
+        Elements
+      </a>
+    </div>
+  </nav>
+</div>
+
+<footer class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a id="portal-sidemenu-close-icon" href="#" class="material-icons mdc-toolbar__menu-icon">
+        <span class="portal-navigation-list__text portal-sidenav-collapse-icon">
+          chevron_left
+        </span>
+      </a>
+    </section>
+  </div>
+</footer>
+
+
+          </nav>
+        </aside>
+        <aside id="dashboard-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Dashboard</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="index.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">dashboard</i>
+                      Analytics
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-commerce.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">shopping_cart</i>
+                      Ecommerce
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-crypto.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">euro_symbol</i>
+                      Cryptocurrency
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-project.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+                      Project
+                    </span>
+                  </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+        <aside id="app-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Apps</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                  <a class="portal-navigation-list__item mdc-list-item mdc-list-item--activated" href="email.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">email</i>
+                      Email
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="todo.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">check_circle</i>
+                      Todo
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="maps.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">pin_drop</i>
+                      Maps
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="chat.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">chat</i>
+                      Chat
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="contacts.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">face</i>
+                      Contacts
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="notes.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+                      Notes
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="calendar.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">date_range</i>
+                      Calendar
+                    </span>
+                  </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+        <aside id="elements-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Elements</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="buttons.html">
+                  <span class="portal-navigation-list__text">
+                    Buttons
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="cards.html">
+                  <span class="portal-navigation-list__text">
+                    Cards
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="checkbox.html">
+                  <span class="portal-navigation-list__text">
+                    Checkbox
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="input.html">
+                  <span class="portal-navigation-list__text">
+                    Input
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="progress.html">
+                  <span class="portal-navigation-list__text">
+                    Linear Progress
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="dialog.html">
+                  <span class="portal-navigation-list__text">
+                    Dialog
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="radio.html">
+                  <span class="portal-navigation-list__text">
+                    Radio
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="select.html">
+                  <span class="portal-navigation-list__text">
+                    Select
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="slider.html">
+                  <span class="portal-navigation-list__text">
+                    Slider
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="snackbar.html">
+                  <span class="portal-navigation-list__text">
+                    Snackbar
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="tabs.html">
+                  <span class="portal-navigation-list__text">
+                    Tabs
+                  </span>
+                </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+      </div>
+
+      <main class="portal-main">
+
+        <header class="mdc-toolbar mdc-toolbar--portal-no-shrink portal-toolbar">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <a id="portal-top-toolbar-burger-icon" href="#" class="portal-burger-menu-icon--funky material-icons mdc-toolbar__menu-icon">menu</a>
+      <span class="mdc-toolbar__title">Portal</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+
+      <div id="portal-layout-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Notifications">
+        apps
+
+        <div class="mdc-menu" tabindex="-1" id="portal-layout-menu">
+          <div class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            
+              <a href="/" class="mdc-list-item" role="menuitem" tabindex="0">Classic</a>
+            
+            
+              <a href="/toolbar" class="mdc-list-item" role="menuitem" tabindex="0">Toolbar</a>
+            
+            
+              <a href="/compact" class="mdc-list-item" role="menuitem" tabindex="0">Compact</a>
+            
+            
+              <a href="/boxed" class="mdc-list-item" role="menuitem" tabindex="0">Boxed</a>
+            
+            
+              <a href="/tabbed" class="mdc-list-item" role="menuitem" tabindex="0">Tabbed</a>
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="portal-theme-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Change Colors">
+        invert_colors
+
+        <div class="mdc-menu" tabindex="-1" id="portal-theme-menu">
+          <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <li id="classic-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Light Blue / Pink
+            </li>
+            <li id="classic-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Green / Deep Orange
+            </li>
+            <li id="classic-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Indigo / Orange
+            </li>
+            <li id="dark-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Light Blue / Pink
+            </li>
+            <li id="dark-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Green / Deep Orange
+            </li>
+            <li id="dark-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Indigo / Orange
+            </li>
+            <li id="night-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Light Blue / Pink
+            </li>
+            <li id="night-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Green / Deep Orange
+            </li>
+            <li id="night-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Indigo / Orange
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="rtl-switch"
+        class="mdc-toolbar__icon toggle material-icons"
+        role="button"
+        aria-label="Text Direction"
+        aria-pressed="false"
+        tabindex="0"
+        data-toggle-on='{"content": "format_textdirection_l_to_r", "label": "Left to Right"}'
+        data-toggle-off='{"content": "format_textdirection_r_to_l", "label": "Right to Left"}'>
+        format_textdirection_l_to_r
+      </div>
+      <div id="portal-top-toolbar-notification-icon" class="mdc-toolbar__icon portal-toolbar__notification-icon" aria-label="Notifications">
+        <span class="material-icons">notifications</span>
+        <span class="portal-badge portal-badge--secondary portal-toolbar__badge">3</span>
+      </div>
+    </section>
+  </div>
+</header>
+
+
+        <div class="portal-main__content mdc-theme--background mdc-theme--text-primary-on-background">
+          
+<div class="mdc-layout-grid mdc-layout-grid--portal-container">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-1-desktop portal-email-menu-container portal-hide-scrollbars">
+      <button class="mdc-button portal-email-menu-container__link portal-email-menu-container__link--selected">
+        <i class="material-icons mdc-button__icon">inbox</i>
+        <span class="portal-badge portal-badge--mini portal-badge--secondary">4</span>
+        Inbox
+      </button>
+      <button class="mdc-button portal-email-menu-container__link">
+        <i class="material-icons mdc-button__icon">stars</i>
+        <span class="portal-badge portal-badge--mini portal-badge--secondary">2</span>
+        Starred
+      </button>
+      <button class="mdc-button portal-email-menu-container__link">
+        <i class="material-icons mdc-button__icon">flag</i>
+        <span class="portal-badge portal-badge--mini portal-badge--secondary">5</span>
+        Important
+      </button>
+      <button class="mdc-button portal-email-menu-container__link">
+        <i class="material-icons mdc-button__icon">send</i>
+        Sent
+      </button>
+      <button class="mdc-button portal-email-menu-container__link">
+        <i class="material-icons mdc-button__icon">drafts</i>
+        Drafts
+      </button>
+      <button class="mdc-button portal-email-menu-container__link">
+        <i class="material-icons mdc-button__icon">contact_mail</i>
+        Contacts
+      </button>
+    </div>
+    <div class="mdc-layout-grid__cell--span-3-desktop portal-email-list-container portal-hide-scrollbars">
+      <div class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-1.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Prof. Ezekiel Mann</span>
+            <span class="mdc-list-item__secondary-text">YOUR temper!' 'Hold your...</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-2.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Clara Cremin</span>
+            <span class="mdc-list-item__secondary-text">But her sister sat still.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-3.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Jeffery Weimann</span>
+            <span class="mdc-list-item__secondary-text">Why, I wouldn't be so proud.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-4.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Newton Welch</span>
+            <span class="mdc-list-item__secondary-text">You gave us three or more;</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-5.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Emmy Lueilwitz</span>
+            <span class="mdc-list-item__secondary-text">I suppose, by being drowned.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-6.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Robbie Jenkins</span>
+            <span class="mdc-list-item__secondary-text">Lizard in head downwards.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-big.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Trudie Feest</span>
+            <span class="mdc-list-item__secondary-text">Alice's head. 'Is that the.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-2.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Sheldon Bashirian</span>
+            <span class="mdc-list-item__secondary-text">Hatter. 'Stolen!' the King.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-1.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Arch Sporer IV</span>
+            <span class="mdc-list-item__secondary-text">I am! But I'd better take.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-4.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Winston Frami</span>
+            <span class="mdc-list-item__secondary-text">Prizes!' Alice had learnt.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-3.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Olaf Donnelly</span>
+            <span class="mdc-list-item__secondary-text">But I've got to the Knave of.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-5.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Eunice Morissette</span>
+            <span class="mdc-list-item__secondary-text">I THINK; or is it twelve?.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-6.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Dr. Moises Beahan DDS</span>
+            <span class="mdc-list-item__secondary-text">He got behind Alice as he.</span>
+          </span>
+        </div>
+        <div class="mdc-list-item">
+          <img class="mdc-list-item__graphic" src="/assets/images/avatar-big.png" width="56" height="56" alt="Brown Bear">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">Berry Dooley</span>
+            <span class="mdc-list-item__secondary-text">I think I must sugar my.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell--span-8-desktop portal-email-preview-container">
+      <h2 class="mdc-typography--headline6">YOUR temper!' 'Hold your.</h2>
+      <div class="mdc-card portal-email-card">
+        <header class="portal-email-card__header">
+          <img class="portal-email-card__avatar" src="/assets/images/avatar-1.png" width="56" height="56" alt="Brown Bear">
+          <div class="portal-email-card__heading">
+            <h1 class=" mdc-typography--headline6 portal-email-card__title">Prof. Ezekiel Mann</h1>
+            <h2 class="mdc-typography--subtitle1 portal-email-card__subtitle">orga79@dunno.com</h2>
+          </div>
+          <span class="portal-email-card__date">3 weeks ago</span>
+        </header>
+        <section class="portal-email-card__text">
+          <p>Numquam blanditiis quae qui accusamus ullam qui sunt magni. Magni enim ut libero fugiat sit saepe. Qui tenetur dicta laboriosam sit. Error nostrum magnam assumenda quasi laboriosam.</p>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse velit ipsa laborum dolorum sed blanditiis ratione atque ducimus voluptas soluta modi alias, quo aspernatur, est repellendus? Dicta excepturi cumque quis!</p>
+
+        </section>
+        <section class="mdc-card__actions portal-email-card__actions mdc-card__action-icons">
+          <a href="#" class="mdc-card__action--icon mdc-card__action">
+            <i class="material-icons" title="Reply">reply</i>
+          </a>
+          <a href="#" class="mdc-card__action--icon mdc-card__action">
+            <i class="material-icons" title="Reply All">reply_all</i>
+          </a>
+          <a href="#" class="mdc-card__action--icon mdc-card__action">
+            <i class="material-icons" title="Forward">forward</i>
+          </a>
+          <div class="portal-email-card__action-delete">
+            <a href="#" class="mdc-card__action--icon mdc-card__action">
+              <i class="material-icons mdc-theme--secondary" title="Delete">delete</i>
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="mdc-card portal-email-card">
+          <header class="portal-email-card__header">
+            <img class="portal-email-card__avatar" src="/assets/images/avatar-3.png" width="56" height="56" alt="Brown Bear">
+            <div class="portal-email-card__heading">
+              <h1 class=" mdc-typography--headline6 portal-email-card__title">Jeffery Weimann</h1>
+              <h2 class="mdc-typography--subtitle1 portal-email-card__subtitle">salma93@ortiz.com</h2>
+            </div>
+            <span class="portal-email-card__date">a month ago</span>
+          </header>
+          <section class="portal-email-card__text">
+            <p>Numquam blanditiis quae qui accusamus ullam qui sunt magni. Magni enim ut libero fugiat sit saepe. Qui tenetur dicta laboriosam sit. Error nostrum magnam assumenda quasi laboriosam.</p>
+
+            <p>Vero quos odio sapiente asperiores. Necessitatibus quo earum cumque illum non deleniti corporis. Sint fugit cupiditate voluptate dignissimos error sint aut. Atque et sed qui sint beatae.</p>
+
+            <p>Eaque dolores velit totam id accusantium. Officia ut provident in est. Doloribus quia nisi quis aut reiciendis ipsum architecto.</p>
+          </section>
+          <section class="mdc-card__actions portal-email-card__actions mdc-card__action-icons">
+            <a href="#" class="mdc-card__action--icon mdc-card__action">
+              <i class="material-icons" title="Reply">reply</i>
+            </a>
+            <a href="#" class="mdc-card__action--icon mdc-card__action">
+              <i class="material-icons" title="Reply All">reply_all</i>
+            </a>
+            <a href="#" class="mdc-card__action--icon mdc-card__action">
+              <i class="material-icons" title="Forward">forward</i>
+            </a>
+            <div class="portal-email-card__action-delete">
+              <a href="#" class="mdc-card__action--icon mdc-card__action">
+                <i class="material-icons mdc-theme--secondary" title="Delete">delete</i>
+              </a>
+            </div>
+          </section>
+        </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <footer class="portal-footer mdc-toolbar mdc-toolbar--portal-no-shrink ">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <div class="mdc-toolbar__title">
+          <small>
+            © 2018 Oxygenna
+          </small>
+      </div>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-twitter"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-facebook"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-linkedin"></i>
+        </small>
+      </a>
+    </section>
+  </div>
+</footer>
+
+
+      </main>
+
+      <aside id="notifications-drawer" class="mdc-drawer mdc-drawer--temporary mdc-drawer--portal-flex-content mdc-drawer--portal-right">
+  <nav class="mdc-drawer__drawer">
+    <nav id="notification-tab-bar" class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="false" tabindex="-1">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Today</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Notifications</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="notification-panels" class="mdc-drawer__content portal-hide-scrollbars portal-notification-panels">
+      <div class="portal-notifications-tab-panel portal-tab-panel portal-tab-panel--active" role="tabpanel" aria-hidden="false">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline4">
+          Thursday, January 19, 2018
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Weather</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-weather">
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/30.gif" alt="London">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">London</span>
+                <span class="mdc-list-item__secondary-text">Cloudy</span>
+              </div>
+              <span class="mdc-list-item__meta">45°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="New York">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">New York</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">18°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="Sydney">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">Sydney</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">69°</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Schedule</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-schedule">
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Go for a walk with Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Mushroom Kingdom
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">9:30</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Meeting with Bowser</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Peach's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:22</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Rescue Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Bowser's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:15</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="portal-notifications-tab-panel portal-tab-panel" role="tabpanel" aria-hidden="true">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline">
+          Today
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-comments portal-social-circle-icon portal-social-circle-icon--message"></i>
+              Message
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>5 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Progress Report</h4>
+            Hi, please find attached report...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-facebook portal-social-circle-icon portal-social-circle-icon--facebook"></i>
+              Facebook
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>10 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            You received a new message
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-slack portal-social-circle-icon portal-social-circle-icon--slack"></i>
+              Slack
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>15 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">#Support</h4>
+            Hi there, got some news...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-twitter portal-social-circle-icon portal-social-circle-icon--twitter"></i>
+              Twitter
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>1 hour ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Web design trends</h4>
+            #web #design
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-spotify portal-social-circle-icon portal-social-circle-icon--spotify"></i>
+              Spotify
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>2 hours ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">No Quarter</h4>
+            Led Zeppelin
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="mdc-toolbar mdc-theme--text-primary-on-light mdc-theme--primary-light-bg mdc-toolbar--portal-no-shrink">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" class="material-icons mdc-toolbar__menu-icon portal-drawer-notification-collapse-icon">chevron_right</a>
+        </section>
+      </div>
+    </footer>
+  </nav>
+</aside>
+
+
+    </div>
+
+    <!-- initialise material components js -->
+    <script src="/assets/js/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
+    <!-- initialise marquee js -->
+    <script src="/assets/js/marquee3k.js"></script>
+    <script>Marquee3k.init()</script>
+    <!-- layout js -->
+    <script src="/assets/js/layout/funky.js"></script>
+    <script src="/assets/js/partials/notification-sidenav.js"></script>
+    <script src="/assets/js/partials/top-toolbar.js"></script>
+    <script src="/assets/js/Chart.js"></script>
+    <script src="/assets/js/pace.js"></script>
+    <!-- page specific JS -->
+    
+
+  </body>
+</html>

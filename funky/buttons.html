@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal, Material Design HTML Template</title>
+    <base href="/funky/">
+    <!-- load Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Barlow:100,300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Portal Styles -->
+    <link id="portal-stylesheet" rel="stylesheet" href="/assets/css/classic-light_blue-pink.css">
+    <!-- page specific CSS -->
+
+        <!-- dataTables -->
+        <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" charset="utf-8"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js" charset="utf-8"></script>
+        <link href="/plugins/datatable/css/dataTables.checkboxes.css" rel="stylesheet"/>
+
+        <!-- dataTables -->
+
+        <!-- branch -->
+        <script type="text/javascript">
+
+        // load Branch
+          (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        // init Branch
+        branch.init('key_live_bbNmRiaTYhv2ys78J34EPmgktEcH8sok');
+
+        </script>
+    
+  <style>
+    .portal-fab-row {
+      display: flex;
+    }
+    .portal-fab-row .mdc-fab {
+      margin-top: 16px;
+    }
+    .mdc-button {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    .portal-theme-color-swatch {
+      -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+      display: inline-block;
+      box-sizing: border-box;
+      width: 150px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      border-radius: 4px;
+    }
+    .portal-pages__header__button {
+      margin-top: 0;
+      margin-bottom: 150px;
+    }
+    .portal-theme-bg--low-luminance {
+      background-color: #3e2723;
+    }
+    .portal-theme-bg--low-luminance-light {
+      background-color: #996057;
+    }
+    .portal-theme-bg--low-luminance-dark {
+      background-color: #6c443d;
+    }
+    .portal-theme-bg--high-luminance {
+      background-color: #fff8e1;
+    }
+    .portal-theme-bg--high-luminance-light {
+      background-color: #ffe79a;
+    }
+    .portal-theme-bg--high-luminance-dark {
+      background-color: #ffd752;
+    }
+    fieldset {
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.04);
+      margin-top: 24px;
+    }
+    fieldset > div {
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+    }
+  </style>
+
+  </head>
+
+  <body class="mdc-typography pace-on">
+
+    <div class="portal-loader-logo-wrapper">
+  <div class="portal-loader-logo">
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__bottom"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__top"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__left"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__right"></div>
+    <div class="portal-loader-logo__circle portal-loader-logo__circle__inner"></div>
+  </div>
+  <div class="portal-loader-logo-text">
+    Portal
+  </div>
+</div>
+
+
+    <div class="portal-wrapper">
+
+      <div class="portal-wrapper__sidenav portal-wrapper__sidenav--compact mdc-theme--dark">
+        <aside id="left-drawer" class="mdc-drawer mdc-drawer--persistent mdc-drawer--open mdc-drawer--portal-flex-content">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-center">
+      <img src="/assets/images/portal-logo.png" alt="Portal" class="mdc-toolbar__logo">
+    </section>
+  </div>
+</header>
+<div class="mdc-list-group mdc-drawer__content portal-drawer-group portal-hide-scrollbars portal-navigation">
+  <nav class="mdc-list portal-navigation-list">
+    <div class="mdc-menu-anchor">
+      <a id="dashboard-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">dashboard</i>
+        Dashboard
+      </a>
+      <a id="apps-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">desktop_windows</i>
+        Apps
+      </a>
+      <a id="elements-submenu" href="#" class="mdc-button portal-menu-button">
+        <i class="material-icons portal-menu-button__icon" aria-hidden="true">widgets</i>
+        Elements
+      </a>
+    </div>
+  </nav>
+</div>
+
+<footer class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a id="portal-sidemenu-close-icon" href="#" class="material-icons mdc-toolbar__menu-icon">
+        <span class="portal-navigation-list__text portal-sidenav-collapse-icon">
+          chevron_left
+        </span>
+      </a>
+    </section>
+  </div>
+</footer>
+
+
+          </nav>
+        </aside>
+        <aside id="dashboard-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Dashboard</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="index.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">dashboard</i>
+                      Analytics
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-commerce.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">shopping_cart</i>
+                      Ecommerce
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-crypto.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">euro_symbol</i>
+                      Cryptocurrency
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="dashboard-project.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+                      Project
+                    </span>
+                  </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+        <aside id="app-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Apps</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="email.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">email</i>
+                      Email
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="todo.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">check_circle</i>
+                      Todo
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="maps.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">pin_drop</i>
+                      Maps
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="chat.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">chat</i>
+                      Chat
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="contacts.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">face</i>
+                      Contacts
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="notes.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">event_note</i>
+                      Notes
+                    </span>
+                  </a>
+                
+                  <a class="portal-navigation-list__item mdc-list-item " href="calendar.html">
+                    <span class="portal-navigation-list__text">
+                      <i class="material-icons mdc-list-item__graphic portal-navigation-list__icon" aria-hidden="true">date_range</i>
+                      Calendar
+                    </span>
+                  </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+        <aside id="elements-drawer-second-level" class="mdc-drawer mdc-drawer--temporary mdc-drawer--closed mdc-drawer--portal-flex-content mdc-drawer--portal-subnav">
+          <nav class="mdc-drawer__drawer">
+            <header class="mdc-toolbar mdc-theme--text-primary-on-dark mdc-theme--primary-dark-bg mdc-toolbar--portal-no-shrink">
+              <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                  <span class="mdc-toolbar__title">Elements</span>
+                </section>
+              </div>
+            </header>
+            <div class="mdc-list-group mdc-drawer__content portal-hide-scrollbars portal-navigation">
+              <nav class="mdc-list portal-navigation-list">
+                
+                <a class="portal-navigation-list__item mdc-list-item mdc-list-item--activated" href="buttons.html">
+                  <span class="portal-navigation-list__text">
+                    Buttons
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="cards.html">
+                  <span class="portal-navigation-list__text">
+                    Cards
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="checkbox.html">
+                  <span class="portal-navigation-list__text">
+                    Checkbox
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="input.html">
+                  <span class="portal-navigation-list__text">
+                    Input
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="progress.html">
+                  <span class="portal-navigation-list__text">
+                    Linear Progress
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="dialog.html">
+                  <span class="portal-navigation-list__text">
+                    Dialog
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="radio.html">
+                  <span class="portal-navigation-list__text">
+                    Radio
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="select.html">
+                  <span class="portal-navigation-list__text">
+                    Select
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="slider.html">
+                  <span class="portal-navigation-list__text">
+                    Slider
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="snackbar.html">
+                  <span class="portal-navigation-list__text">
+                    Snackbar
+                  </span>
+                </a>
+                
+                <a class="portal-navigation-list__item mdc-list-item " href="tabs.html">
+                  <span class="portal-navigation-list__text">
+                    Tabs
+                  </span>
+                </a>
+                
+              </nav>
+            </div>
+          </nav>
+        </aside>
+      </div>
+
+      <main class="portal-main">
+
+        <header class="mdc-toolbar mdc-toolbar--portal-no-shrink portal-toolbar">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <a id="portal-top-toolbar-burger-icon" href="#" class="portal-burger-menu-icon--funky material-icons mdc-toolbar__menu-icon">menu</a>
+      <span class="mdc-toolbar__title">Portal</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+
+      <div id="portal-layout-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Notifications">
+        apps
+
+        <div class="mdc-menu" tabindex="-1" id="portal-layout-menu">
+          <div class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            
+              <a href="/" class="mdc-list-item" role="menuitem" tabindex="0">Classic</a>
+            
+            
+              <a href="/toolbar" class="mdc-list-item" role="menuitem" tabindex="0">Toolbar</a>
+            
+            
+              <a href="/compact" class="mdc-list-item" role="menuitem" tabindex="0">Compact</a>
+            
+            
+              <a href="/boxed" class="mdc-list-item" role="menuitem" tabindex="0">Boxed</a>
+            
+            
+              <a href="/tabbed" class="mdc-list-item" role="menuitem" tabindex="0">Tabbed</a>
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div id="portal-theme-menu-button" class="material-icons mdc-toolbar__icon mdc-menu-anchor" aria-label="Change Colors">
+        invert_colors
+
+        <div class="mdc-menu" tabindex="-1" id="portal-theme-menu">
+          <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+            <li id="classic-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Light Blue / Pink
+            </li>
+            <li id="classic-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Green / Deep Orange
+            </li>
+            <li id="classic-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Classic - Indigo / Orange
+            </li>
+            <li id="dark-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Light Blue / Pink
+            </li>
+            <li id="dark-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Green / Deep Orange
+            </li>
+            <li id="dark-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Dark - Indigo / Orange
+            </li>
+            <li id="night-light_blue-pink" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Light Blue / Pink
+            </li>
+            <li id="night-green-deep_orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Green / Deep Orange
+            </li>
+            <li id="night-indigo-orange" class="mdc-list-item" role="menuitem" tabindex="0">
+              Night - Indigo / Orange
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="rtl-switch"
+        class="mdc-toolbar__icon toggle material-icons"
+        role="button"
+        aria-label="Text Direction"
+        aria-pressed="false"
+        tabindex="0"
+        data-toggle-on='{"content": "format_textdirection_l_to_r", "label": "Left to Right"}'
+        data-toggle-off='{"content": "format_textdirection_r_to_l", "label": "Right to Left"}'>
+        format_textdirection_l_to_r
+      </div>
+      <div id="portal-top-toolbar-notification-icon" class="mdc-toolbar__icon portal-toolbar__notification-icon" aria-label="Notifications">
+        <span class="material-icons">notifications</span>
+        <span class="portal-badge portal-badge--secondary portal-toolbar__badge">3</span>
+      </div>
+    </section>
+  </div>
+</header>
+
+
+        <div class="portal-main__content mdc-theme--background mdc-theme--text-primary-on-background">
+          
+  <div class="portal-pages__header">
+    <button class="mdc-fab material-icons portal-pages__header__button" aria-label="Favorite">
+      <span class="mdc-fab__icon">
+        favorite_border
+      </span>
+    </button>
+  </div>
+  <section class="portal-pages__content">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-1-desktop"></div>
+        <div class="mdc-layout-grid__cell--span-10-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone portal-pages__content-inner">
+          <h3 class="portal-pages__heading">Buttons</h3>
+          <p class="mdc-typography--body1">Buttons communicate the action that will occur when the user touches them.</p>
+          <p class="mdc-typography--body1">Material buttons trigger an ink reaction on press. They may display text, imagery, or both. Flat buttons and raised buttons are the most commonly used types. There are three standard types of buttons:</p>
+          <ul class="portal-list mdc-typography--body1">
+            <li><strong>Floating action button:</strong> A circular material button that lifts and displays an ink reaction on press.</li>
+            <li><strong>Raised button:</strong>  A typically rectangular material button that lifts and displays ink reactions on press.</li>
+            <li><strong>Unelevated button:</strong>  A button made of ink that displays ink reactions on press but does not lift.</li>
+          </ul>
+
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Enabled</legend>
+            <div>
+              <button class="mdc-button">
+                Text
+              </button>
+              <button class="mdc-button mdc-button--raised">
+                Raised
+              </button>
+              <button class="mdc-button mdc-button--unelevated">
+                Unelevated
+              </button>
+              <button class="mdc-button mdc-button--stroked">
+                Stroked
+              </button>
+            </div>
+          </fieldset><br>
+          <fieldset disabled>
+            <legend class="mdc-typography--subheading2">Disabled</legend>
+            <div>
+              <button class="mdc-button">
+                Text
+              </button>
+              <button class="mdc-button mdc-button--raised">
+                Raised
+              </button>
+              <button class="mdc-button mdc-button--unelevated">
+                Unelevated
+              </button>
+              <button class="mdc-button mdc-button--stroked">
+                Stroked
+              </button>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Raised Button</legend>
+            <div>
+              <button class="mdc-button mdc-button--raised">
+                Baseline
+              </button>
+              <button class="mdc-button mdc-button--raised mdc-button--compact">
+                Compact
+              </button>
+              <button class="mdc-button mdc-button--raised mdc-button--dense">
+                Dense
+              </button>
+              <button class="mdc-button mdc-button--raised mdc-theme--secondary-bg">
+                Secondary
+              </button>
+              <button class="mdc-button mdc-button--raised">
+                <i class="material-icons mdc-button__icon">favorite</i>
+                Icon
+              </button>
+              <a href="javascript:void(0)" class="mdc-button mdc-button--raised">
+                Link
+              </a>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Unelevated Button</legend>
+            <div>
+              <button class="mdc-button mdc-button--unelevated">
+                Baseline
+              </button>
+              <button class="mdc-button mdc-button--unelevated mdc-button--compact">
+                Compact
+              </button>
+              <button class="mdc-button mdc-button--unelevated mdc-button--dense">
+                Dense
+              </button>
+              <button class="mdc-button mdc-button--unelevated mdc-theme--secondary-bg">
+                Secondary
+              </button>
+              <button class="mdc-button mdc-button--unelevated">
+                <i class="material-icons mdc-button__icon">favorite</i>
+                Icon
+              </button>
+              <a href="javascript:void(0)" class="mdc-button mdc-button--unelevated">
+                Link
+              </a>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Stroked Button</legend>
+            <div>
+              <button class="mdc-button mdc-button--stroked">
+                Baseline
+              </button>
+              <button class="mdc-button mdc-button--stroked mdc-button--compact">
+                Compact
+              </button>
+              <button class="mdc-button mdc-button--stroked mdc-button--dense">
+                Dense
+              </button>
+              <button class="mdc-button mdc-button--stroked secondary-stroked-button">
+                Secondary
+              </button>
+              <button class="mdc-button mdc-button--stroked">
+                <i class="material-icons mdc-button__icon">favorite</i>
+                Icon
+              </button>
+              <a href="javascript:void(0)" class="mdc-button mdc-button--stroked">
+                Link
+              </a>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Floating Action Button (FAB)</legend>
+            <div class="portal-fab-row">
+              <figure>
+                <figcaption>
+                  Default
+                  <div class="mdc-typography--body1">Secondary theme color</div>
+                </figcaption>
+                <button class="mdc-fab material-icons" aria-label="Favorite">
+                  <span class="mdc-fab__icon">
+                    favorite_border
+                  </span>
+                </button>
+              </figure>
+              <figure>
+                <figcaption>
+                  Mini
+                  <div class="mdc-typography--body1"><code>mdc-fab--mini</code></div>
+                </figcaption>
+                <button class="mdc-fab mdc-fab--mini material-icons" aria-label="Favorite">
+                  <span class="mdc-fab__icon">
+                    favorite_border
+                  </span>
+                </button>
+              </figure>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Theme colors as text</legend>
+            <div>
+              <div class="portal-theme-color-swatch mdc-theme--primary mdc-typography--body2">Primary</div>
+            </div>
+            <div>
+              <div class="portal-theme-color-swatch mdc-theme--secondary mdc-typography--body2">Secondary</div>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Theme colors as background</legend>
+            <div>
+              <div class="portal-theme-color-swatch mdc-theme--primary-bg mdc-theme--on-primary">Primary</div>
+              <div class="portal-theme-color-swatch mdc-theme--primary-light-bg mdc-theme--text-primary-on-light">Primary Light</div>
+              <div class="portal-theme-color-swatch mdc-theme--primary-dark-bg mdc-theme--text-primary-on-dark">Primary Dark</div>
+            </div>
+            <div>
+              <div class="portal-theme-color-swatch mdc-theme--secondary-bg mdc-theme--on-secondary">Secondary</div>
+              <div class="portal-theme-color-swatch mdc-theme--secondary-bg mdc-theme--text-primary-on-light">Secondary Light</div>
+              <div class="portal-theme-color-swatch mdc-theme--secondary-bg mdc-theme--text-primary-on-dark">Secondary Dark</div>
+            </div>
+            <div>
+              <div class="portal-theme-color-swatch mdc-theme--background mdc-theme--text-primary-on-background">Background</div>
+            </div>
+          </fieldset><br>
+          <fieldset>
+            <legend class="mdc-typography--subheading2">Light and dark tonal variants for extreme input luminance</legend>
+            <div>
+              <div class="portal-theme-color-swatch portal-theme-bg--low-luminance mdc-theme--text-primary-on-dark">Low Luminance</div>
+              <div class="portal-theme-color-swatch portal-theme-bg--low-luminance-light mdc-theme--text-primary-on-dark">Light Variant</div>
+              <div class="portal-theme-color-swatch portal-theme-bg--low-luminance-dark mdc-theme--text-primary-on-dark">Dark Variant</div>
+            </div>
+            <div>
+              <div class="portal-theme-color-swatch portal-theme-bg--high-luminance mdc-theme--text-primary-on-light">High Luminance</div>
+              <div class="portal-theme-color-swatch portal-theme-bg--high-luminance-light mdc-theme--text-primary-on-light">Light Variant</div>
+              <div class="portal-theme-color-swatch portal-theme-bg--high-luminance-dark mdc-theme--text-primary-on-light">Dark Variant</div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        </div>
+
+        <footer class="portal-footer mdc-toolbar mdc-toolbar--portal-no-shrink ">
+  <div class="mdc-toolbar__row mdc-theme--background mdc-theme--text-primary-on-background">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <div class="mdc-toolbar__title">
+          <small>
+            © 2018 Oxygenna
+          </small>
+      </div>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-twitter"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-facebook"></i>
+        </small>
+      </a>
+      <a href="#" class="mdc-toolbar__icon mdc-theme--secondary">
+        <small>
+          <i class="fa fa-linkedin"></i>
+        </small>
+      </a>
+    </section>
+  </div>
+</footer>
+
+
+      </main>
+
+      <aside id="notifications-drawer" class="mdc-drawer mdc-drawer--temporary mdc-drawer--portal-flex-content mdc-drawer--portal-right">
+  <nav class="mdc-drawer__drawer">
+    <nav id="notification-tab-bar" class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="false" tabindex="-1">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Today</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label">Notifications</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="notification-panels" class="mdc-drawer__content portal-hide-scrollbars portal-notification-panels">
+      <div class="portal-notifications-tab-panel portal-tab-panel portal-tab-panel--active" role="tabpanel" aria-hidden="false">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline4">
+          Thursday, January 19, 2018
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Weather</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-weather">
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/30.gif" alt="London">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">London</span>
+                <span class="mdc-list-item__secondary-text">Cloudy</span>
+              </div>
+              <span class="mdc-list-item__meta">45°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="New York">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">New York</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">18°</span>
+            </li>
+            <li class="mdc-list-item">
+              <img class="mdc-list-item__graphic" src="http://l.yimg.com/a/i/us/we/52/31.gif" alt="Sydney">
+              <div class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">Sydney</span>
+                <span class="mdc-list-item__secondary-text">Clear</span>
+              </div>
+              <span class="mdc-list-item__meta">69°</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h1 class="portal-notification-card__title">Schedule</h1>
+          </section>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive mdc-list--portal-schedule">
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Go for a walk with Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Mushroom Kingdom
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">9:30</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Meeting with Bowser</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Peach's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:22</span>
+            </li>
+            <li class="mdc-list-item">
+              <div class="mdc-list-item__text">
+                <h4 class="portal-notification-card__subtitle">Rescue Peach</h4>
+                <span class="mdc-list-item__secondary-text">
+                  <i class="material-icons mdc-theme--primary">place</i> Bowser's Castle
+                </span>
+              </div>
+              <span class="mdc-list-item__meta">11:15</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="portal-notifications-tab-panel portal-tab-panel" role="tabpanel" aria-hidden="true">
+        <h1 class="portal-notifications-tab-panel__title mdc-typography--headline">
+          Today
+        </h1>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-comments portal-social-circle-icon portal-social-circle-icon--message"></i>
+              Message
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>5 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Progress Report</h4>
+            Hi, please find attached report...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-facebook portal-social-circle-icon portal-social-circle-icon--facebook"></i>
+              Facebook
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>10 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            You received a new message
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-slack portal-social-circle-icon portal-social-circle-icon--slack"></i>
+              Slack
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>15 min ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">#Support</h4>
+            Hi there, got some news...
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-twitter portal-social-circle-icon portal-social-circle-icon--twitter"></i>
+              Twitter
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>1 hour ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">Web design trends</h4>
+            #web #design
+          </section>
+        </div>
+        <div class="mdc-card portal-notification-card">
+          <section class="mdc-card__primary">
+            <h2 class="portal-notification-card__title">
+              <i class="fa fa-spotify portal-social-circle-icon portal-social-circle-icon--spotify"></i>
+              Spotify
+            </h2>
+            <div class="mdc-typography--caption">
+              <span>2 hours ago</span>
+              <i class="material-icons">clear</i>
+            </div>
+          </section>
+          <section class="portal-notification-card__content">
+            <h4 class="portal-notification-card__subtitle">No Quarter</h4>
+            Led Zeppelin
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="mdc-toolbar mdc-theme--text-primary-on-light mdc-theme--primary-light-bg mdc-toolbar--portal-no-shrink">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <a href="#" class="material-icons mdc-toolbar__menu-icon portal-drawer-notification-collapse-icon">chevron_right</a>
+        </section>
+      </div>
+    </footer>
+  </nav>
+</aside>
+
+
+    </div>
+
+    <!-- initialise material components js -->
+    <script src="/assets/js/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
+    <!-- initialise marquee js -->
+    <script src="/assets/js/marquee3k.js"></script>
+    <script>Marquee3k.init()</script>
+    <!-- layout js -->
+    <script src="/assets/js/layout/funky.js"></script>
+    <script src="/assets/js/partials/notification-sidenav.js"></script>
+    <script src="/assets/js/partials/top-toolbar.js"></script>
+    <script src="/assets/js/Chart.js"></script>
+    <script src="/assets/js/pace.js"></script>
+    <!-- page specific JS -->
+    
+
+  </body>
+</html>
